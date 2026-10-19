@@ -4,7 +4,7 @@ Plugin que aplica uma caixa de fundo independente em cada quebra explícita da l
 
 **Versão atual:** 0.3.61
 
-Desenvolvido por **Zosma Labs**.
+Desenvolvido por **1Byte Labs**.
 
 ## Instalação e uso
 
