@@ -1,0 +1,32 @@
+name: Publicar versão
+on:
+  push:
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  pacote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run package
+      - name: Preparar nome do pacote
+        run: cp release/*.zip Fundos-para-Letras-Spresenter-0.3.62.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Fundos-para-Letras-Spresenter-0.3.62
+          path: Fundos-para-Letras-Spresenter-0.3.62.zip
+          if-no-files-found: error
+      - uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/v')
+        with:
+          name: Fundos para Letras v0.3.62
+          body: 'Atualiza a identificação do autor para 1Byte Labs. Mantém o identificador do plugin para preservar a atualização das instalações existentes.'
+          files: Fundos-para-Letras-Spresenter-0.3.62.zip
