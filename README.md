@@ -1,3 +1,5 @@
+<p align="center"><img src="./assets/1bytelabs-cover.svg" alt="fundos-para-letras-spresenter — 1Byte Labs" width="100%" /></p>
+
 # Fundos Para Letras no SPresenter
 
 Plugin que aplica uma caixa de fundo independente em cada quebra explícita da letra de uma música ao vivo.
@@ -65,3 +67,7 @@ Distribuído sob a licença MIT. Consulte [LICENSE](LICENSE).
 - Estrutura do renderizador real examinada no app.asar fornecido pelo usuário.
 - Compilação TypeScript e produção.
 - Integridade do pacote ZIP.
+
+## Contato — 1Byte Labs
+
+[1bytelabs.com.br](https://1bytelabs.com.br) · [contato@1bytelabs.com.br](mailto:contato@1bytelabs.com.br)
